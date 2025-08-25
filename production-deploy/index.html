@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tasty Authentication - Production Ready</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
+        .success { color: #28a745; font-weight: bold; }
+        .endpoint { background: #f8f9fa; padding: 10px; margin: 5px 0; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Tasty Authentication System</h1>
+    <p class="success">Production deployment successful</p>
+    
+    <h3>Test Credentials</h3>
+    <div class="endpoint">
+        <strong>Email:</strong> carter@tastyyyy.com<br>
+        <strong>Password:</strong> admin123
+    </div>
+    
+    <h3>Available Endpoints</h3>
+    <div class="endpoint"><code>POST /api/auth-proxy/login</code> - Authenticate user</div>
+    <div class="endpoint"><code>GET /api/auth-proxy/user</code> - Get session info</div>
+    <div class="endpoint"><code>POST /api/auth-proxy/logout</code> - End session</div>
+    
+    <p><small>Deployed automatically • PlanetScale MySQL • bcrypt validation</small></p>
+</body>
+</html>

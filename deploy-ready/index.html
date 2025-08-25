@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty CRM - Authentication Ready</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .credentials {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Authentication System Deployed</h1>
+        <p class="success">✅ Production deployment successful</p>
+        <p>Your CRM authentication system is now live and ready for use.</p>
+        
+        <div class="credentials">
+            <h3>Test Credentials</h3>
+            <p><strong>Email:</strong> carter@tastyyyy.com</p>
+            <p><strong>Password:</strong> admin123</p>
+        </div>
+        
+        <h3>Available Endpoints</h3>
+        <ul>
+            <li><code>/api/auth-proxy/login</code> - Employee login</li>
+            <li><code>/api/auth-proxy/user</code> - Get user session</li>
+            <li><code>/api/auth-proxy/logout</code> - Logout</li>
+        </ul>
+        
+        <div>
+            <a href="/api/auth-proxy/login" class="btn">Test Login API</a>
+            <a href="/login" class="btn">Go to Login Page</a>
+        </div>
+        
+        <hr style="margin: 30px 0;">
+        <p><small>Deployed from Replit • Authentication via PlanetScale MySQL</small></p>
+    </div>
+</body>
+</html>

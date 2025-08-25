@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Profile</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Hero Section with Purple Gradient -->
+    <div class="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="container mx-auto px-6 py-16 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-12">
+                <!-- Creator Avatar -->
+                <div class="flex-shrink-0">
+                    <div class="w-32 h-32 border-4 border-white border-opacity-20 rounded-full bg-purple-500 flex items-center justify-center text-white text-3xl font-bold">
+                        JM
+                    </div>
+                </div>
+
+                <!-- Creator Info -->
+                <div class="flex-grow text-center lg:text-left">
+                    <h1 class="text-4xl lg:text-5xl font-bold mb-4" id="creator-name">
+                        Loading...
+                    </h1>
+                    <p class="text-xl text-purple-100 mb-6" id="creator-username">
+                        @loading
+                    </p>
+                    
+                    <!-- Stats Row -->
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                        <div class="text-center">
+                            <div class="flex items-center justify-center mb-2">
+                                <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                                </svg>
+                            </div>
+                            <div class="text-2xl font-bold" id="creator-revenue">
+                                $0
+                            </div>
+                            <div class="text-sm text-purple-200">Revenue</div>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="flex items-center justify-center mb-2">
+                                <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                            </div>
+                            <div class="text-2xl font-bold" id="creator-messages">
+                                0
+                            </div>
+                            <div class="text-sm text-purple-200">Messages</div>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="flex items-center justify-center mb-2">
+                                <svg class="w-6 h-6 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                            </div>
+                            <div class="text-2xl font-bold" id="creator-response">
+                                0%
+                            </div>
+                            <div class="text-sm text-purple-200">Response Rate</div>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="flex items-center justify-center mb-2">
+                                <svg class="w-6 h-6 text-orange-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                </svg>
+                            </div>
+                            <div class="text-2xl font-bold" id="creator-status">
+                                Active
+                            </div>
+                            <div class="text-sm text-purple-200">Status</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Performance Overview -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center space-x-2 mb-4">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                    <h3 class="text-lg font-semibold">Performance Overview</h3>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+                        <span class="font-medium">Total Revenue</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm" id="revenue-badge">
+                            $0
+                        </span>
+                    </div>
+                    
+                    <div class="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                        <span class="font-medium">Messages Sent</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm" id="messages-badge">
+                            0
+                        </span>
+                    </div>
+                    
+                    <div class="flex justify-between items-center p-3 bg-purple-50 rounded-lg">
+                        <span class="font-medium">Response Rate</span>
+                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm" id="response-badge">
+                            0%
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creator Status -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center space-x-2 mb-4">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                    </svg>
+                    <h3 class="text-lg font-semibold">Creator Status</h3>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+                        <span class="font-medium">Account Status</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm" id="status-badge">
+                            Active
+                        </span>
+                    </div>
+                    
+                    <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+                        <span class="font-medium">Last Activity</span>
+                        <span class="text-sm text-slate-600" id="last-activity">
+                            Recent
+                        </span>
+                    </div>
+                    
+                    <div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+                        <span class="font-medium">Account Created</span>
+                        <span class="text-sm text-slate-600" id="created-date">
+                            2024
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get token from URL
+        const token = window.location.pathname.slice(1);
+        console.log('Token page - Token from URL:', token);
+        
+        // Fetch creator data
+        async function loadCreatorData() {
+            try {
+                const response = await fetch(`/api/creators/by-token/${token}`);
+                if (!response.ok) {
+                    throw new Error('Creator not found');
+                }
+                
+                const creator = await response.json();
+                console.log('Token page - Creator data:', creator);
+                
+                // Update page content
+                document.getElementById('creator-name').textContent = creator.displayName || 'Creator';
+                document.getElementById('creator-username').textContent = `@${creator.username || 'creator'}`;
+                
+                const revenue = creator.revenue ? parseFloat(creator.revenue).toLocaleString() : '0';
+                document.getElementById('creator-revenue').textContent = `$${revenue}`;
+                document.getElementById('revenue-badge').textContent = `$${revenue}`;
+                
+                const messages = creator.messageCount?.toLocaleString() || '0';
+                document.getElementById('creator-messages').textContent = messages;
+                document.getElementById('messages-badge').textContent = messages;
+                
+                const responseRate = creator.responseRate || '0';
+                document.getElementById('creator-response').textContent = `${responseRate}%`;
+                document.getElementById('response-badge').textContent = `${responseRate}%`;
+                
+                const status = creator.isActive ? 'Active' : 'Inactive';
+                document.getElementById('creator-status').textContent = status;
+                document.getElementById('status-badge').textContent = status;
+                document.getElementById('status-badge').className = creator.isActive 
+                    ? 'bg-green-100 text-green-800 px-2 py-1 rounded text-sm'
+                    : 'bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm';
+                
+                if (creator.lastActivity) {
+                    document.getElementById('last-activity').textContent = new Date(creator.lastActivity).toLocaleDateString();
+                }
+                
+                if (creator.createdAt) {
+                    document.getElementById('created-date').textContent = new Date(creator.createdAt).toLocaleDateString();
+                }
+                
+                // Update page title
+                document.title = `${creator.displayName} - Creator Profile`;
+                
+            } catch (error) {
+                console.error('Error loading creator data:', error);
+                document.getElementById('creator-name').textContent = 'Creator Not Found';
+                document.getElementById('creator-username').textContent = '';
+            }
+        }
+        
+        // Load data when page loads
+        loadCreatorData();
+    </script>
+</body>
+</html>

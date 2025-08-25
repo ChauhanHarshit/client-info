@@ -1,0 +1,37 @@
+// Deployment configuration for production environments
+// This file handles platform-specific settings for large file uploads
+
+const deploymentConfig = {
+  // Maximum request body size for file uploads
+  maxBodySize: '500mb',
+  
+  // Timeout settings for large file uploads
+  timeout: {
+    request: 600000, // 10 minutes
+    keepAlive: 610000,
+    headers: 620000
+  },
+  
+  // Platform-specific configurations
+  platforms: {
+    vercel: {
+      maxRequestBodySize: '500mb',
+      functions: {
+        maxDuration: 300
+      }
+    },
+    railway: {
+      variables: {
+        CLIENT_MAX_BODY_SIZE: '500m',
+        PROXY_READ_TIMEOUT: '600s',
+        PROXY_SEND_TIMEOUT: '600s'
+      }
+    },
+    replit: {
+      maxRequestSize: '500mb',
+      uploadTimeout: '600s'
+    }
+  }
+};
+
+module.exports = deploymentConfig;

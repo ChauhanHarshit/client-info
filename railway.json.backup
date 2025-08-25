@@ -1,0 +1,19 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "npm run build:server"
+  },
+  "deploy": {
+    "startCommand": "npm run start:server",
+    "healthcheckPath": "/api/health",
+    "healthcheckTimeout": 100,
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  },
+  "variables": {
+    "CLIENT_MAX_BODY_SIZE": "600m",
+    "PROXY_READ_TIMEOUT": "600s",
+    "PROXY_SEND_TIMEOUT": "600s"
+  }
+}

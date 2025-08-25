@@ -1,0 +1,26 @@
+<svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="15" y="15" width="50" height="50" rx="12" 
+        fill="rgba(59, 130, 246, 0.05)" 
+        stroke="#3b82f6" 
+        stroke-width="1" 
+        filter="url(#glow)">
+    <animate attributeName="stroke" 
+             values="#3b82f6;#1d4ed8;#3b82f6" 
+             dur="3s" 
+             repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" 
+                      type="scale" 
+                      values="1;1.02;1" 
+                      dur="3s" 
+                      repeatCount="indefinite"/>
+  </rect>
+</svg>

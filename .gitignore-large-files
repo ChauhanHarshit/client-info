@@ -1,0 +1,11 @@
+# Large files to exclude from Git
+uploads/*.mov
+uploads/*.mp4
+uploads/file-*
+meilisearch*
+backups/*.sql
+.local/share/pnpm/pnpm
+
+# Keep the directories but not the large files
+!uploads/.gitkeep
+!backups/.gitkeep

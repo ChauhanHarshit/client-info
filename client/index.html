@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://ik.imagekit.io/tasty/app-assets/favicon.png?tr=w-32,h-32,f-auto" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://ik.imagekit.io/tasty/app-assets/favicon.png?tr=w-16,h-16,f-auto" />
+    <link rel="shortcut icon" href="https://ik.imagekit.io/tasty/app-assets/favicon.png?tr=f-auto" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://ik.imagekit.io/tasty/app-assets/favicon.png?tr=w-180,h-180,f-auto" />
+    
+    <title>CRM Dashboard</title>
+    
+    <!-- Meta tags for link previews -->
+    <meta name="description" content="CRM Dashboard for managing content creators and inspiration pages" />
+    <meta property="og:title" content="CRM Dashboard" />
+    <meta property="og:description" content="CRM Dashboard for managing content creators and inspiration pages" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tastyyyy.com" />
+    <meta property="og:image" content="https://tastyyyy.com/tasty-share-background.png" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CRM Dashboard" />
+    <meta name="twitter:description" content="CRM Dashboard for managing content creators and inspiration pages" />
+    <meta name="twitter:image" content="https://tastyyyy.com/tasty-share-background.png" />
+    
+    <!-- Dynamic meta tags for specific pages -->
+    <script>
+      // Update meta tags for specific pages on initial load
+      (function() {
+        const path = window.location.pathname;
+        const baseUrl = 'https://tastyyyy.com';
+        const defaultImage = 'https://tastyyyy.com/tasty-share-background.png';
+        
+        // Page-specific configurations
+        const pageConfigs = {
+          '/help': {
+            title: 'Help & Support',
+            description: 'Find answers to common questions and get help with our platform'
+          },
+          '/help-admin': {
+            title: 'Help Admin',
+            description: 'Admin interface for managing help content'
+          },
+          '/login': {
+            title: 'Login',
+            description: 'Sign in to your account'
+          },
+
+          '/content-trips': {
+            title: 'Trips Dashboard',
+            description: 'Manage content creation trips and schedules'
+          },
+          '/creator-page-logins': {
+            title: 'Creator Logins',
+            description: 'Manage creator account access'
+          },
+          '/clients': {
+            title: 'Creators',
+            description: 'Manage creator profiles and assignments'
+          },
+          '/inspo-pages': {
+            title: 'Inspiration Pages',
+            description: 'Content inspiration and management'
+          },
+          '/inspo-pages-admin': {
+            title: 'Inspiration Pages Admin',
+            description: 'Admin interface for inspiration content'
+          },
+          '/customs-dashboard': {
+            title: 'Customs Dashboard',
+            description: 'Manage custom content requests'
+          },
+          '/client-group-chats': {
+            title: 'Client Group Chats',
+            description: 'Group communication management'
+          },
+          '/priority-content': {
+            title: 'Priority Content',
+            description: 'High-priority content management'
+          },
+          '/reports': {
+            title: 'Reports',
+            description: 'Analytics and performance reports'
+          },
+          '/calendar': {
+            title: 'Calendar',
+            description: 'Event scheduling and management'
+          },
+          '/employee-management': {
+            title: 'Employee Management',
+            description: 'Team and employee administration'
+          },
+          '/creator-app-layout': {
+            title: 'Creator App',
+            description: 'Creator content management interface'
+          },
+          '/creatorlogin': {
+            title: 'Creator Portal',
+            description: 'Secure access for content creators'
+          }
+        };
+        
+        // Handle dynamic routes with patterns
+        let config = pageConfigs[path];
+        if (!config) {
+          if (path.startsWith('/trip-invite/')) {
+            config = {
+              title: 'Trip Invitation',
+              description: 'You\'re invited to join an exciting content creation trip'
+            };
+          } else if (path.startsWith('/team-form/')) {
+            config = {
+              title: 'Team Form',
+              description: 'Submit content to your team'
+            };
+          } else if (path.startsWith('/creator-app-layout/')) {
+            config = {
+              title: 'Creator App',
+              description: 'Creator content management portal'
+            };
+          }
+        }
+        
+        if (config) {
+          document.title = config.title;
+          document.querySelector('meta[name="description"]').setAttribute('content', config.description);
+          document.querySelector('meta[property="og:title"]').setAttribute('content', config.title);
+          document.querySelector('meta[property="og:description"]').setAttribute('content', config.description);
+          document.querySelector('meta[property="og:url"]').setAttribute('content', baseUrl + path);
+          document.querySelector('meta[property="og:image"]').setAttribute('content', defaultImage);
+          document.querySelector('meta[name="twitter:title"]').setAttribute('content', config.title);
+          document.querySelector('meta[name="twitter:description"]').setAttribute('content', config.description);
+          document.querySelector('meta[name="twitter:image"]').setAttribute('content', defaultImage);
+        }
+      })();
+    </script>
+    
+    <!-- Highlight.io Session Replay & Error Tracking -->
+    <script src="https://unpkg.com/highlight.run"></script>
+    <script>
+      H.init('7e3y14pg', {
+        environment: 'production',
+        version: 'commit:abcdefg12345',
+        networkRecording: {
+          enabled: true,
+          recordHeadersAndBody: true,
+          urlBlocklist: [
+            "https://www.googleapis.com/identitytoolkit",
+            "https://securetoken.googleapis.com"
+          ]
+        },
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="moneyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#moneyGradient)"/>
+  <!-- Dollar signs -->
+  <text x="80" y="100" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#dcfce7" opacity="0.6">$</text>
+  <text x="200" y="60" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#dcfce7" opacity="0.4">$</text>
+  <text x="320" y="140" font-family="Arial, sans-serif" font-size="35" font-weight="bold" fill="#dcfce7" opacity="0.5">$</text>
+  <text x="150" y="160" font-family="Arial, sans-serif" font-size="25" font-weight="bold" fill="#dcfce7" opacity="0.3">$</text>
+</svg>

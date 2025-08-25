@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "backup:manual": "scripts/backup-system.sh manual",
+    "backup:pre-change": "scripts/backup-system.sh pre-change",
+    "backup:daily": "scripts/backup-system.sh daily",
+    "backup:restore": "echo 'Restore requires manual execution with specific backup file'",
+    "backup:list": "ls -la backups/",
+    "backup:verify": "ls -la backups/ | grep -E '\\.(sql|log)$'",
+    "backup:supabase-config": "node scripts/supabase-backup-config.js configure",
+    "backup:supabase-status": "node scripts/supabase-backup-config.js status",
+    "backup:hybrid-monitor": "scripts/hybrid-backup-monitor.sh full",
+    "backup:hybrid-report": "scripts/hybrid-backup-monitor.sh report",
+    "backup:sync-check": "scripts/hybrid-backup-monitor.sh sync"
+  }
+}
